@@ -24,3 +24,8 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd /var/www/html
+      cp .env.example .env
